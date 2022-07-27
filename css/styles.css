@@ -1,9 +1,13 @@
 :root {
   --accent-color: #2196f3;
+  --second-accent-color: #188ce8;
   --primary-text-color: #212121;
-  --footer-background: #2f303a;
   --second-text-color: #757575;
+  --footer-background: #2f303a;
   --background-color: #ffffff;
+  --background-buttom-color: #f5f4fa;
+  --lighter-color: rgba(255, 255, 255, 0.6);
+  --black-color: #000000;
 }
 
 body {
@@ -14,23 +18,29 @@ body {
 
 .link {
   text-decoration: none;
+  font-style: normal;
 }
 
 .list {
   list-style: none;
-}
-
-.header-contackts {
-  text-decoration: none;
-}
-.header-logo {
-  text-decoration: none;
 }
 .text-link:active {
   color: var(--accent-color);
 }
 .header-link.current {
   color: var(--accent-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*----header----*/
@@ -54,7 +64,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--black-color);
 }
 .header-blue-logo {
   font-family: 'Raleway', sans-serif;
@@ -88,11 +98,10 @@ body {
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--background-color);
-}
-.hero-button {
-  cursor: pointer;
 }
 .hero-button {
   font-family: inherit;
@@ -100,37 +109,28 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-style: none;
+  border-radius: 4px;
   background-color: var(--accent-color);
   color: var(--background-color);
-  box-shadow: 0px 4px 4px rgba(241, 240, 240, 0.15);
 }
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--accent-color);
+  color: var(--second-accent-color);
 }
 /*----features----*/
 .main-section {
   background-color: var(--background-color);
 }
-.features-section-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowarp;
-  clip-path: insert(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.features-list-titel {
+.features-list-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  font-weight: bold;
   color: var(--primary-text-color);
 }
 .features-list-text {
@@ -163,7 +163,7 @@ body {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-text-color);
 }
 .team-text {
   font-size: 16px;
@@ -175,50 +175,26 @@ body {
 /*------Portfolio-----*/
 /*--------Hero-------*/
 
-.filter-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowarp;
-  clip-path: insert(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.filter-main-buttom {
+.filter-buttom {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-}
-.filter-buttom,
-.filter-main-buttom {
-  cursor: pointer;
-}
-.filter-button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
   border-radius: 4px;
+  border-style: none;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--background-buttom-color);
 }
-.filter-main-buttom:hover,
-.filter-main-buttom:focus {
-  background: var(--accent-color);
-  color: var(--background-color);
-}
+
 .filter-buttom:hover,
 .filter-buttom:focus {
   background: var(--accent-color);
   color: var(--background-color);
+}
+.filter-buttom {
+  cursor: pointer;
 }
 .portfolio-list-title {
   font-size: 18px;
@@ -228,14 +204,11 @@ body {
 }
 .portfolio-list-text {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
 /*-------footer------*/
-.link {
-  text-decoration: none;
-}
 .footer {
   background-color: var(--footer-background);
 }
@@ -252,26 +225,23 @@ body {
   color: var(--accent-color);
 }
 .footer-link {
-  text-decoration: none;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--lighter-color);
 }
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
 }
-.footer-link-adress {
-  text-decoration: none;
+.footer-adress {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--background-color);
 }
-.footer-link-adress:hover,
-.footer-link-adress:focus {
+.footer-adress:hover,
+.footer-adress:focus {
   color: var(--accent-color);
 }
