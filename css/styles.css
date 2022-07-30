@@ -90,6 +90,9 @@ img {
 }
 
 /*----header----*/
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .navigation {
   display: flex;
 }
@@ -200,13 +203,12 @@ img {
   background-color: var(--accent-color);
   color: var(--background-color);
 
-  display: flex;
+  display: block;
+  margin: 0 auto;
   cursor: pointer;
   padding: 10px 32px;
   min-width: 200px;
-  margin-bottom: 200px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 50px;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -331,6 +333,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+.portfolio-list-item {
+  flex-basis: calc(100%-60px) / 4;
 }
 .portfolio-content {
   padding-top: 20px;
